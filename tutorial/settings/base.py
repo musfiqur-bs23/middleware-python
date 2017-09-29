@@ -8,10 +8,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '-apk16j_5ch-wi2nu9#*+vi&00pe)eyoe29!_x0mq@l2-!y3vk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+# SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -37,7 +40,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'tutorial.middleware.LoginRequiredMiddleware'
+    'tutorial.middleware.LoginRequiredMiddleware',
+    'tutorial.middleware.Auth0Middleware'
 ]
 
 ROOT_URLCONF = 'tutorial.urls'
